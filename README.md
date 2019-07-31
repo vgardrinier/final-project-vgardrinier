@@ -175,3 +175,7 @@ The 5 tests should pass.
 Explanation for each test can be found as comments in the energyTrading_tests.js file.
 
 
+Sources:
+1. Pet Shop Tutorial - [check it out](https://www.trufflesuite.com/tutorials/pet-shop)
+2. Bileto READ.me - [very detailed](https://github.com/dev-bootcamp-2019/final-project-feamcor/blob/master/README.md)
+3. TimBeiko Solidty Marketplace READ.me - [concise](https://github.com/timbeiko/solidity-marketplace/blob/master/README.md)
