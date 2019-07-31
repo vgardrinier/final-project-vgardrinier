@@ -18,16 +18,21 @@ As currency for energy purchases, it uses Ethereum's native Ether.
 a. The following instructions assume that you are using a *nix-like OS (e.g. Linux, macOS etc.) from its command-line and that Git is already installed.
 b. Install Truffle.
 For more information, follow the instructions found [here](https://truffleframework.com/docs/truffle/getting-started/installation).
+
 `$ npm install truffle -g`
+
 c. Install Ganache CLI.
 For more information, follow the instructions found [here](https://truffleframework.com/docs/ganache/quickstart).
+
 `$ npm install ganache-cli -g`
+
 d. Go to a directory of your preference in your computer (e.g. ~/Desktop).
 e. Download or clone final-project-vgardrinier repo to your computer.
 f. Go to the new directory.
+
   `cd final-project-vgardrinier `
   
- Additional Information: 
+#Additional Information: 
 The truffle-config.js is configured for the following networks:
 development and ganachecli using port 8545;
 ganachegui using port 7545;
@@ -35,6 +40,7 @@ ganachegui using port 7545;
 Now, Open 2 new terminal windows.
 In the 1st one, run ganache-cli to start your local blockchain. Copy the mnemonic phrase in a safe place (offline).
 You should see something similar:
+
  `Ganache CLI v6.4.4 (ganache-core: 2.5.6)
 
 Available Accounts
@@ -80,8 +86,9 @@ Listening on 127.0.0.1:8545`
 
 In the second terminal window, run truffle compile and truffle migrate to deploy your contracts on your local blockchain.
 This is what you should see:
-`Starting migrations...
-======================
+
+`Starting Migrations:
+
 > Network name:    'development'
 > Network id:      1564607200066
 > Block gas limit: 0x6691b7
