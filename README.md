@@ -41,7 +41,8 @@ Now, Open 2 new terminal windows.
 In the 1st one, run ganache-cli to start your local blockchain. Copy the mnemonic phrase in a safe place (offline).
 You should see something similar:
 
- `Ganache CLI v6.4.4 (ganache-core: 2.5.6)
+```python
+Ganache CLI v6.4.4 (ganache-core: 2.5.6)
 
 Available Accounts
 ==================
@@ -82,12 +83,14 @@ Gas Limit
 ==================
 6721975
 
-Listening on 127.0.0.1:8545`
+Listening on 127.0.0.1:8545
+```
 
 In the second terminal window, run truffle compile and truffle migrate to deploy your contracts on your local blockchain.
 This is what you should see:
 
-`Starting Migrations:
+```python
+Starting Migrations:
 
 > Network name:    'development'
 > Network id:      1564607200066
@@ -145,7 +148,8 @@ This is what you should see:
 Summary
 =======
 > Total deployments:   2
-> Final cost:          0.03852568 ETH`
+> Final cost:          0.03852568 ETH
+```
 
 Once the migration is complete, run:
 `npm run dev` for the application to start. 
