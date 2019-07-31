@@ -10,7 +10,11 @@ The first iteration only test with what I call Energy Units of 150 wei to simpli
 We focus our attention on 4 test collectives (aka Neighbouroods)but the idea is to operate at a global scale in the near future.
 
 It is written in Solidity and compiled using solc version 0.5.8.
-It can be deployed toa development Blockchain like Ganache. Future iterations will include Testnets such as Rinkeby and the Ethereum mainnet. 
+It can be deployed toa development Blockchain like Ganache and the tesnet Rinkeby.
+For Rinkeby, you can do it directly from Remix.
+a. With Metamask, connect to the Rinkeby tesnet.
+b. Find a faucet and get an account with Ether.
+c. Deploy via Remix (deploy button after compiling) and use Inject Web3 which will read Metamask on the Rinkeby Network.
 
 As currency for energy purchases, it uses Ethereum's native Ether.
 
