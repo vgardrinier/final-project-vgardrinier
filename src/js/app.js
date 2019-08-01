@@ -58,11 +58,15 @@ App = {
       App.contracts.energyTrading.setProvider(App.web3Provider);
 
       // Use our contract to retrieve and mark the adopted pets
-      return App.getCollectives();
+      return App.contracts.energyTrading.getUsers();
     });
 
     return App.bindEvents();
   },
+
+  //  bindEventstwo: function() {
+  //   $(document).on('click', '.btn-add', App.addCollectivenew);
+  // },
 
   bindEvents: function() {
     $(document).on('click', '.btn-adopt', App.handleCollective);
@@ -87,6 +91,30 @@ App = {
       console.log(err.message);
     });
   },
+
+// NOT WORKING YET
+  addCollectivenew: function() {
+     let addr;
+     var energyTradingInstance;
+
+     $('#addAdmin').submit(function( event ) {
+       addr = $("input#adminAddrAdd").val();
+
+       nHomes = $("input#adminNumberHomes").val();
+       web3.eth.getAccounts(function(error, accounts) {
+         if (error) {
+           console.log(error);
+         }
+
+         var account = accounts[0];
+         App.contracts.energyTrading.deployed().then(function(instance) {
+           energyTradingInstance = instance;
+           return energyTradingInstance.addCollective(addr, nHomes, {from: account});
+         });
+       });
+       event.preventDefault();
+     });
+   },
 
   handleCollective: function(event) {
     event.preventDefault();
@@ -113,6 +141,8 @@ App = {
       });
     });
   }
+
+
 
 };
 

@@ -92,6 +92,7 @@ contract EnergyTrading {
     emit LogEnrolled(msg.sender);
   }
 
+  //Checks if the user is enrolled in the collective or not.
   function isenrolled() public view returns(bool) {
     return(enrolled[msg.sender]);
   }
@@ -107,6 +108,7 @@ contract EnergyTrading {
 
 
   // FUNCTIONS FOR COLLECTIVES - Only the company aka the owner can add a new collective.
+  //Only thhe Owner should be able to add a new collective on the platform.
   function addCollective (string memory _information, uint256 _totalHomes)
   public
   isOwner()
@@ -123,6 +125,7 @@ contract EnergyTrading {
     return(idCollective - 1);
   }
 
+  //Anybody should be able to read a collective's information to make sure one joins the correct one.
   function readCollective (uint256 collectiveId) public view
   returns (string memory, uint, bool)
     {
@@ -131,6 +134,7 @@ contract EnergyTrading {
       collectives[collectiveId].isOpen);
   }
 
+//Only the Owner could update the collective if need be (new home Owner address, extented number of homes in one collective).
   function updateCollective (uint collectiveId, string memory _newinfo, uint _newTotalHomes) public
   isOwner()
   returns (string memory, uint, bool)
