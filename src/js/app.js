@@ -99,7 +99,7 @@ App = {
 
      $('#addAdmin').submit(function( event ) {
        addr = $("input#adminAddrAdd").val();
-       console.log(addr);
+
        nHomes = $("input#adminNumberHomes").val();
        web3.eth.getAccounts(function(error, accounts) {
          if (error) {
@@ -109,7 +109,6 @@ App = {
          var account = accounts[0];
          App.contracts.energyTrading.deployed().then(function(instance) {
            energyTradingInstance = instance;
-           console.log(addr)
            return energyTradingInstance.addCollective(addr, nHomes, {from: account});
          });
        });
