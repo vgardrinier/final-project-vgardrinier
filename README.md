@@ -3,7 +3,6 @@
 #Introduction
 This project is the first iteration of what I hope to be a P2P Solar Energy Trading System at a Neighborood scale.
 
-It was built as the final project of the 2019 ConsenSys Developer Bootcamp.
 
  In brief, Home Owners with low rooftop potential (bad inclination or location), can collaborate with their neighbors by either investing in the purchase of their solar Panels or simply by paying of monthly fee (which fluctuates according to the grid's energy price) in exchange for a certain percentage of the other Home Owner's Solar Energy (electricity).
 The first iteration only test with what I call Energy Units of 150 wei to simplify the transactions and no native Tokens.
